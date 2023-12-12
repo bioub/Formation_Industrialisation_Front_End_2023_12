@@ -1,3 +1,4 @@
+import './main.scss';
 import { fetchTodos, postTodo } from "./api.js";
 import { createTodoItem } from "./todos.js";
 

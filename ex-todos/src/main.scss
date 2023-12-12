@@ -1,0 +1,5 @@
+$errorColor: red;
+
+input.invalid {
+  border: 1px solid $errorColor;
+}

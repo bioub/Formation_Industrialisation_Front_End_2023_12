@@ -4,9 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </head>
   <body>
     <h1>Bonjour, world!</h1>
-    <button>Click Me</button>
+    <button class="btn btn-primary">Click Me</button>
+    <div class="dropdown mt-3">
+      <button class="btn btn-primary dropdown-toggle" type="button"  aria-expanded="false">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+    <script>
+      const btnEl = document.querySelector('.dropdown-toggle')
+      const dropdown = new bootstrap.Dropdown(btnEl)
+      btnEl.addEventListener('click', () => {
+        dropdown.toggle();
+      });
+    </script>
   </body>
 </html>

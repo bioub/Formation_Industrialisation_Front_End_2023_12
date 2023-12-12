@@ -1,3 +1,6 @@
+import { fetchTodos, postTodo } from "./api.js";
+import { createTodoItem } from "./todos.js";
+
 /** @type {HTMLFormElement} */
 const formEl = document.querySelector(".todo-form");
 
@@ -12,6 +15,10 @@ const divEl = document.querySelector(".todo-list");
 
 formEl.addEventListener("submit", async (event) => {
   event.preventDefault();
+
+  // const { createTodoItem } = await import('./todos.js');
+  // const { postTodo } = await import('./api.js');
+
   inputEl.classList.remove("invalid");
 
   if (!inputEl.value.match(/^[\p{Alphabetic}0-9\- ]+$/u)) {
@@ -99,13 +106,13 @@ inputEl.addEventListener("input", () => {
   localStorage.setItem("value-todo", inputEl.value);
 });
 
-async function load() {
-  const todos = await fetchTodos();
+// async function load() {
+//   const todos = await fetchTodos();
 
-  for (const todo of todos.slice(0, 10)) {
-    const todoItemEl = createTodoItem(todo);
-    divEl.append(todoItemEl);
-  }
-}
+//   for (const todo of todos.slice(0, 10)) {
+//     const todoItemEl = createTodoItem(todo);
+//     divEl.append(todoItemEl);
+//   }
+// }
 
-load();
+// load();

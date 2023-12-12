@@ -9,7 +9,7 @@
  * @param {Todo} todo
  * @returns {HTMLDivElement}
  */
-function createTodoItem(todo) {
+export function createTodoItem(todo) {
   /*
   <div class="todo-item" data-todo-id="123">
     <input type="checkbox" class="todo-completed">

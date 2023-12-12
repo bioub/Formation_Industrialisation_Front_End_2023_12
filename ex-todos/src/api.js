@@ -14,7 +14,7 @@
 /**
  * @returns {Promise<Todo[]>}
  */
-async function fetchTodos() {
+export async function fetchTodos() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
   return await res.json();
 }
@@ -23,8 +23,8 @@ async function fetchTodos() {
  * @param {TodoWithoutId} todoDto
  * @returns {Promise<Todo>}
  */
-async function postTodo(todoDto) {
-  await fetch("https://jsonplaceholder.typicode.com/todos", {
+export async function postTodo(todoDto) {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
     method: "POST",
     body: JSON.stringify(todoDto),
     headers: {

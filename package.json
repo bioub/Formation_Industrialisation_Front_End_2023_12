@@ -3,10 +3,12 @@
     "bootstrap": "^5.3.2"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
     "sass": "^1.69.5"
   },
   "scripts": {
     "build:scss": "sass scss:css",
-    "watch:scss": "sass --watch scss:css"
+    "watch:scss": "sass --watch scss:css",
+    "prepare": "husky install"
   }
 }

@@ -1,7 +1,7 @@
 import config from "./config.json";
 import type { Todo, TodoWithoutId } from "./types";
 
-// const url = "http://localhost";
+const url = "http://localhost";
 
 export async function fetchTodos(): Promise<Todo[]> {
   const res = await fetch(config.apiBaseUrl + "/todos");

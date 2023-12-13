@@ -14,6 +14,8 @@
   "scripts": {
     "build:scss": "sass scss:css",
     "watch:scss": "sass --watch scss:css",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest --dom",
+    "coverage": "vitest --coverage --dom"
   }
 }

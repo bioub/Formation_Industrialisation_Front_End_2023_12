@@ -8,14 +8,14 @@ const config = {
   entry: "./src/main.js",
   output: {
     clean: true,
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",
     }),
     new webpack.BannerPlugin("Copyright MyCompany"),
-    new MiniCssExtractPlugin({ filename: "bundle.css" }),
+    new MiniCssExtractPlugin({ filename: "bundle.[contenthash].css" }),
   ],
   module: {
     rules: [

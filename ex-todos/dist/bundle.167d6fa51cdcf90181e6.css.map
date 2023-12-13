@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.167d6fa51cdcf90181e6.css","mappings":";AAEA,cACE","sources":["webpack:///./src/main.scss"],"sourcesContent":["$errorColor: red;\r\n\r\ninput.invalid {\r\n  border: 1px solid $errorColor;\r\n}\r\n"],"names":[],"sourceRoot":""}

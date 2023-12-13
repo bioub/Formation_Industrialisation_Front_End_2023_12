@@ -1,4 +1,8 @@
-import config from './config.json';
+import config from "./config.json";
+
+if (process.env.NODE_ENV === "production") {
+  console.log("TEST");
+}
 
 /**
  * @typedef {object} Todo

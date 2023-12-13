@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss":
@@ -8,22 +7,23 @@
   \****************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `input.invalid {
   border: 1px solid red;
-}`, ""]);
+}`, "",{"version":3,"sources":["webpack://./src/main.scss"],"names":[],"mappings":"AAEA;EACE,qBAAA;AADF","sourcesContent":["$errorColor: red;\r\n\r\ninput.invalid {\r\n  border: 1px solid $errorColor;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36,6 +36,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `input.invalid {
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -124,16 +125,28 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
-  \**************************************************************/
+/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
+  \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
-module.exports = function (i) {
-  return i[1];
+module.exports = function (item) {
+  var content = item[1];
+  var cssMapping = item[3];
+  if (!cssMapping) {
+    return content;
+  }
+  if (typeof btoa === "function") {
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    return [content].concat([sourceMapping]).join("\n");
+  }
+  return [content].join("\n");
 };
 
 /***/ }),
@@ -144,6 +157,7 @@ module.exports = function (i) {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -198,6 +212,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -291,6 +306,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -334,6 +350,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -353,6 +370,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -372,6 +390,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -442,6 +461,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -465,11 +485,16 @@ module.exports = styleTagTransform;
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   fetchTodos: () => (/* binding */ fetchTodos),
 /* harmony export */   postTodo: () => (/* binding */ postTodo)
 /* harmony export */ });
+/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config.json */ "./src/config.json");
+/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_config_json__WEBPACK_IMPORTED_MODULE_0__);
+
+
 /**
  * @typedef {object} Todo
  * @property {number} todo.id
@@ -487,7 +512,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {Promise<Todo[]>}
  */
 async function fetchTodos() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const res = await fetch((_config_json__WEBPACK_IMPORTED_MODULE_0___default().apiBaseUrl) + "/todos");
   return await res.json();
 }
 
@@ -496,7 +521,7 @@ async function fetchTodos() {
  * @returns {Promise<Todo>}
  */
 async function postTodo(todoDto) {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
+  const res = await fetch((_config_json__WEBPACK_IMPORTED_MODULE_0___default().apiBaseUrl) + "/todos", {
     method: "POST",
     body: JSON.stringify(todoDto),
     headers: {
@@ -516,6 +541,7 @@ async function postTodo(todoDto) {
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   createTodoItem: () => (/* binding */ createTodoItem)
@@ -561,6 +587,16 @@ function createTodoItem(todo) {
   return divEl;
 }
 
+
+/***/ }),
+
+/***/ "./src/config.json":
+/*!*************************!*\
+  !*** ./src/config.json ***!
+  \*************************/
+/***/ (() => {
+
+throw new Error("Module parse failed: Cannot parse JSON: Unexpected token \"/\" (0x2F) in JSON at position 5 while parsing near \"{\\r\\n  // l'URL de l'API RE...\"\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\nError: Cannot parse JSON: Unexpected token \"/\" (0x2F) in JSON at position 5 while parsing near \"{\\r\\n  // l'URL de l'API RE...\"\n    at JsonParser.parse (/Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/json/JsonParser.js:54:10)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:1093:26\n    at processResult (/Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:806:11)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:866:5\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:407:3\n    at iterateNormalLoaders (/Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:233:10)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:224:4\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:840:15\n    at Array.eval (eval at create (/Users/romain/Desktop/Formation/ex-todos/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:12:1)\n    at runCallbacks (/Users/romain/Desktop/Formation/ex-todos/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:43:15)");
 
 /***/ })
 
@@ -638,8 +674,9 @@ function createTodoItem(todo) {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
@@ -756,18 +793,19 @@ inputEl.addEventListener("input", () => {
   localStorage.setItem("value-todo", inputEl.value);
 });
 
-// async function load() {
-//   const todos = await fetchTodos();
+async function load() {
+  const todos = await (0,_api_js__WEBPACK_IMPORTED_MODULE_1__.fetchTodos)();
 
-//   for (const todo of todos.slice(0, 10)) {
-//     const todoItemEl = createTodoItem(todo);
-//     divEl.append(todoItemEl);
-//   }
-// }
+  for (const todo of todos.slice(0, 10)) {
+    const todoItemEl = (0,_todos_js__WEBPACK_IMPORTED_MODULE_2__.createTodoItem)(todo);
+    divEl.append(todoItemEl);
+  }
+}
 
-// load();
+load();
 
 })();
 
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map

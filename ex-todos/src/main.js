@@ -107,13 +107,13 @@ inputEl.addEventListener("input", () => {
   localStorage.setItem("value-todo", inputEl.value);
 });
 
-// async function load() {
-//   const todos = await fetchTodos();
+async function load() {
+  const todos = await fetchTodos();
 
-//   for (const todo of todos.slice(0, 10)) {
-//     const todoItemEl = createTodoItem(todo);
-//     divEl.append(todoItemEl);
-//   }
-// }
+  for (const todo of todos.slice(0, 10)) {
+    const todoItemEl = createTodoItem(todo);
+    divEl.append(todoItemEl);
+  }
+}
 
-// load();
+load();

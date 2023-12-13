@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 const config = {
-  devtool: false,
+  devtool: 'source-map',
   entry: './src/main.js',
   output: {
     clean: true,

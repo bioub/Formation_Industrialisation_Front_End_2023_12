@@ -1,3 +1,5 @@
+import config from './config.json';
+
 /**
  * @typedef {object} Todo
  * @property {number} todo.id
@@ -15,7 +17,7 @@
  * @returns {Promise<Todo[]>}
  */
 export async function fetchTodos() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const res = await fetch(config.apiBaseUrl + "/todos");
   return await res.json();
 }
 
@@ -24,7 +26,7 @@ export async function fetchTodos() {
  * @returns {Promise<Todo>}
  */
 export async function postTodo(todoDto) {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
+  const res = await fetch(config.apiBaseUrl + "/todos", {
     method: "POST",
     body: JSON.stringify(todoDto),
     headers: {

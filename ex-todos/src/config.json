@@ -1,0 +1,4 @@
+{
+  // l'URL de l'API REST
+  "apiBaseUrl": "https://jsonplaceholder.typicode.com"
+}

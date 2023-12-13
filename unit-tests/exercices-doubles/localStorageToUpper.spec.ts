@@ -24,6 +24,6 @@ describe("convertToNumber function", () => {
     expect(localStorageToUpper("myKey")).toBe("MYFAKEVALUE");
   });
   test("throws when param is convertible to number", () => {
-    expect(localStorageToUpper("myKey")).toBe("MYFAKEVALUE");
+    expect(localStorageToUpper("myKey")).not.toBe("MYFAKEVALUE");
   });
 });

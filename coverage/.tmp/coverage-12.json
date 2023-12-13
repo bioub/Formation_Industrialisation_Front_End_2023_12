@@ -1,0 +1,51 @@
+{
+  "result": [
+    {
+      "scriptId": "1042",
+      "url": "file:///Users/romain/Desktop/Formation/unit-tests/exercices-doubles/genererAlea.spec.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1870, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1870, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 526, "endOffset": 736, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1045",
+      "url": "file:///Users/romain/Desktop/Formation/unit-tests/exercices-doubles/genererAlea.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1174, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1174, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "genererAlea",
+          "ranges": [{ "startOffset": 185, "endOffset": 328, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 428, "endOffset": 455, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ]
+}

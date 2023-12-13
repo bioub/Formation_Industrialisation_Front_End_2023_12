@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -8,9 +9,12 @@ const config = {
     clean: true,
     filename: 'bundle.js'
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+    new HtmlWebpackPlugin({
     template: './index.html'
-  })],
+  }),
+  new webpack.BannerPlugin('Copyright MyCompany')
+],
   module: {
     rules: [
       {

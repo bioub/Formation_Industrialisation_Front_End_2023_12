@@ -1,4 +1,6 @@
+/*! Copyright MyCompany */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss":
@@ -7,7 +9,6 @@
   \****************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -36,7 +37,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `input.invalid {
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -131,7 +131,6 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (item) {
@@ -157,7 +156,6 @@ module.exports = function (item) {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -212,7 +210,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var stylesInDOM = [];
@@ -306,7 +303,6 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var memo = {};
@@ -350,7 +346,6 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -370,7 +365,6 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -390,7 +384,6 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -461,7 +454,6 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -485,14 +477,12 @@ module.exports = styleTagTransform;
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   fetchTodos: () => (/* binding */ fetchTodos),
 /* harmony export */   postTodo: () => (/* binding */ postTodo)
 /* harmony export */ });
 /* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config.json */ "./src/config.json");
-/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_config_json__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /**
@@ -512,7 +502,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {Promise<Todo[]>}
  */
 async function fetchTodos() {
-  const res = await fetch((_config_json__WEBPACK_IMPORTED_MODULE_0___default().apiBaseUrl) + "/todos");
+  const res = await fetch(_config_json__WEBPACK_IMPORTED_MODULE_0__.apiBaseUrl + "/todos");
   return await res.json();
 }
 
@@ -521,7 +511,7 @@ async function fetchTodos() {
  * @returns {Promise<Todo>}
  */
 async function postTodo(todoDto) {
-  const res = await fetch((_config_json__WEBPACK_IMPORTED_MODULE_0___default().apiBaseUrl) + "/todos", {
+  const res = await fetch(_config_json__WEBPACK_IMPORTED_MODULE_0__.apiBaseUrl + "/todos", {
     method: "POST",
     body: JSON.stringify(todoDto),
     headers: {
@@ -541,7 +531,6 @@ async function postTodo(todoDto) {
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   createTodoItem: () => (/* binding */ createTodoItem)
@@ -594,9 +583,9 @@ function createTodoItem(todo) {
 /*!*************************!*\
   !*** ./src/config.json ***!
   \*************************/
-/***/ (() => {
+/***/ ((module) => {
 
-throw new Error("Module parse failed: Cannot parse JSON: Unexpected token \"/\" (0x2F) in JSON at position 5 while parsing near \"{\\r\\n  // l'URL de l'API RE...\"\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\nError: Cannot parse JSON: Unexpected token \"/\" (0x2F) in JSON at position 5 while parsing near \"{\\r\\n  // l'URL de l'API RE...\"\n    at JsonParser.parse (/Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/json/JsonParser.js:54:10)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:1093:26\n    at processResult (/Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:806:11)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:866:5\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:407:3\n    at iterateNormalLoaders (/Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:233:10)\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/loader-runner/lib/LoaderRunner.js:224:4\n    at /Users/romain/Desktop/Formation/ex-todos/node_modules/webpack/lib/NormalModule.js:840:15\n    at Array.eval (eval at create (/Users/romain/Desktop/Formation/ex-todos/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:12:1)\n    at runCallbacks (/Users/romain/Desktop/Formation/ex-todos/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:43:15)");
+module.exports = JSON.parse('{"apiBaseUrl":"https://jsonplaceholder.typicode.com"}');
 
 /***/ })
 
@@ -674,9 +663,8 @@ throw new Error("Module parse failed: Cannot parse JSON: Unexpected token \"/\" 
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
